@@ -20,6 +20,11 @@ export class CustomerController {
     return this.customerService.create(createCustomerDto);
   }
 
+  @Get('distance')
+  getCustomersDistance() {
+    return this.customerService.getCustomersDistance();
+  }
+
   @Get()
   findAll() {
     return this.customerService.findAll();

@@ -10,6 +10,24 @@ export class CustomerService {
     return this.customerRepository.create(createCustomerDto);
   }
 
+  async getCustomersDistance() {
+    try {
+      const allCustomers = await this.customerRepository.findAll();
+      const custumersWithDistance = allCustomers.map((customer) => ({
+        ...customer,
+        distanceToOrigin: Math.sqrt(
+          Math.pow(customer.x, 2) + Math.pow(customer.y, 2),
+        ),
+      }));
+      const sortedCustomers = custumersWithDistance.sort(
+        (a, b) => a.distanceToOrigin - b.distanceToOrigin,
+      );
+      return sortedCustomers;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   findAll() {
     return this.customerRepository.findAll();
   }
