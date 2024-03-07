@@ -27,7 +27,7 @@ export class UserController {
     return this.userService.findOneById(id);
   }
 
-  @Patch('id')
+  @Patch(':id')
   updateOne(@Body() updateUserDto: UpdateUserDto, @Param('id') id: number) {
     return this.userService.updateOne(updateUserDto, id);
   }

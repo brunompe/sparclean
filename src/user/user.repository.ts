@@ -50,15 +50,17 @@ export class UserRepository {
   }
 
   async updateOne(updateUserDto: UpdateUserDto, id: number): Promise<User> {
+    const hashedPassword = await bcrypt.hash(updateUserDto.password, 10);
     const updatedUser = this.prisma.user.update({
       where: {
         id,
       },
       data: {
         ...updateUserDto,
+        password: hashedPassword,
       },
     });
-    return updatedUser;
+    return { ...updatedUser, password: undefined };
   }
 
   async deleteOne(id: number) {
