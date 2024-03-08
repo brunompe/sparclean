@@ -10,6 +10,12 @@ Acesse o repositório frontend [aqui](https://github.com/brunompe/sparclean-fron
 $ npm install
 ```
 
+## Setando o DB
+
+```bash
+$ npm run db:generate
+```
+
 ## Rodando a aplicação
 
 ```bash
@@ -21,6 +27,13 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+```
+
+## Dados login
+
+```bash
+email: admin@facilitajuridico.com
+senha: FacilitaJuridico.2024
 ```
 
 ## Stacks
