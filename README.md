@@ -48,3 +48,111 @@ Ao desenvolver essa segunda parte, altere a rota de cadastro e visualização pa
 
 - [x] O algoritmo para calcular as rota deve estar disponibilizado via rota da api
 - [x] Implementar botão para visualizar modal com a lista de clientes a serem visitados
+
+## Documentação da API
+
+### Usuários
+
+#### Cria um Usuário
+
+```http
+  POST /user
+```
+
+##### Exemplo
+
+```
+{
+    "email": "<email do usuário>",
+    "password": "<senha escolhida>",
+    "name": "<Nome do Usuário>"
+}
+```
+
+#### Retorna todos os Usuários
+
+```http
+  GET /user
+```
+
+#### Retorna um Usuário por Id
+
+```http
+  GET /user/id/:id
+```
+
+#### Retorna um Usuário por Email
+
+```http
+  GET /user/email/:email
+```
+
+#### Atualiza um Usuário
+
+```http
+  PATCH /user/:id
+```
+
+##### Exemplo
+
+```
+{
+    "email": "<email do usuário>",
+    "password": "<senha escolhida>",
+    "name": "<Nome do Usuário>"
+}
+```
+
+### Clientes
+
+#### Cria um Usuário
+
+```http
+  POST /customer
+```
+
+##### Exemplo
+
+```
+{
+    "email": "<email do cliente>",
+    "phone": "<telefone do cliente>",
+    "name": "<nome do cliente>",
+    "userId": <id do usuário>
+}
+```
+
+#### Retorna todos os Clientes de um Usuário
+
+```http
+  GET /customer
+```
+
+#### Retorna todos a distancia dos Clientes de um Usuário
+
+```http
+  GET /customer/distance
+```
+
+#### Retorna um Cliente de um Usuário por Id
+
+```http
+  GET /customer/:id
+```
+
+#### Atualiza um Cliente de um Usuário
+
+```http
+  PATCH /customer/:id
+```
+
+##### Exemplo
+
+```
+{
+    "email": "<email do cliente>",
+    "phone": "<telefone do cliente>",
+    "name": "<nome do cliente>",
+    "userId": <id do usuário>
+}
+```
