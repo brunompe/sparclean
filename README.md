@@ -30,7 +30,7 @@ $ npm run start:prod
 - PostgreSQL
 - Prisma
 
-### Parte 1
+## Parte 1
 
 Uma empresa que realiza limpeza em residências enfrenta desafios no gerenciamento de seus clientes e busca uma solução eficiente para cadastrar e visualizar as informações que hoje são controladas em planilhas. Para centralizar as informações e ajudar na expansão da empresa, ela deseja uma plataforma onde seja possível gerenciar os seus clientes.
 
@@ -39,7 +39,7 @@ Uma empresa que realiza limpeza em residências enfrenta desafios no gerenciamen
 - [x] Listar os seus clientes e filtrar com base nas informações cadastradas
 - [x] Cadastrar clientes novos
 
-### Parte 2
+## Parte 2
 
 Suponha que, além de cadastrar e visualizar clientes, a empresa deseja otimizar as rotas de atendimento para maximizar a eficiência na visitação dos clientes. Considere um mapa bidimensional representando a localização dos clientes, onde cada ponto cartesiano possui um cliente. Cada cliente cadastrado possui uma coordenada X e uma coordenada Y nesse mapa.
 
