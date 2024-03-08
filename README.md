@@ -2,7 +2,7 @@
 
 Esse repositório contém a API do teste.
 
-Acesse o repositório frontend [aqui](https://www.example.com).
+Acesse o repositório frontend [aqui](https://github.com/brunompe/sparclean-frontend).
 
 ## Instalação Backend
 
