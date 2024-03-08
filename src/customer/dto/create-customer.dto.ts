@@ -12,4 +12,10 @@ export class CreateCustomerDto {
 
   @IsNumber()
   userId: number;
+
+  @IsString()
+  x: string;
+
+  @IsString()
+  y: string;
 }

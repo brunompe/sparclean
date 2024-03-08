@@ -10,7 +10,11 @@ export class CustomerRepository {
 
   async create(createCustomerDto: CreateCustomerDto): Promise<Customer> {
     const customer = await this.prisma.customer.create({
-      data: createCustomerDto,
+      data: {
+        ...createCustomerDto,
+        x: +createCustomerDto.x,
+        y: +createCustomerDto.y,
+      },
     });
 
     return customer;
@@ -32,6 +36,15 @@ export class CustomerRepository {
     return customer;
   }
 
+  async findOneByName(name: string): Promise<Customer> {
+    const customer = await this.prisma.customer.findUnique({
+      where: {
+        name,
+      },
+    });
+    return customer;
+  }
+
   async updateOne(
     updateCustomerDto: UpdateCustomerDto,
     id: number,
@@ -40,7 +53,11 @@ export class CustomerRepository {
       where: {
         id,
       },
-      data: updateCustomerDto,
+      data: {
+        ...updateCustomerDto,
+        x: +updateCustomerDto.x,
+        y: +updateCustomerDto.y,
+      },
     });
     return updatedCustomer;
   }
