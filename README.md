@@ -23,6 +23,13 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Stacks
+
+- Nest.js
+- Typescript
+- PostgreSQL
+- Prisma
+
 ### Parte 1
 
 Uma empresa que realiza limpeza em residências enfrenta desafios no gerenciamento de seus clientes e busca uma solução eficiente para cadastrar e visualizar as informações que hoje são controladas em planilhas. Para centralizar as informações e ajudar na expansão da empresa, ela deseja uma plataforma onde seja possível gerenciar os seus clientes.
