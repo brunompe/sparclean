@@ -29,6 +29,30 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## DDl
+
+```bash
+CREATE TABLE IF NOT EXISTS "User" (
+  "id" SERIAL PRIMARY KEY,
+  "email" VARCHAR(255) UNIQUE NOT NULL,
+  "password" VARCHAR(255) NOT NULL,
+  "name" VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS "Customer" (
+  "id" SERIAL PRIMARY KEY,
+  "name" VARCHAR(255) UNIQUE NOT NULL,
+  "email" VARCHAR(255),
+  "phone" VARCHAR(255),
+  "userId" INTEGER REFERENCES "User" ("id"),
+  "x" INTEGER DEFAULT 0,
+  "y" INTEGER DEFAULT 0
+);
+
+CREATE INDEX IF NOT EXISTS "Customer_userId_idx" ON "Customer" ("userId");
+
+```
+
 ## Dados login
 
 ```bash
